@@ -8,6 +8,10 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     [HideInInspector]
     public int currentHealth;
+    [Tooltip("Coins awarded to the player when this unit dies.")]
+    public int coinValue = 0;
+    [Tooltip("Score awarded to the player when this unit dies.")]
+    public int scoreValue = 0;
 
     private void Awake()
     {
@@ -36,6 +40,11 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        if (GameManager.Instance != null && CompareTag("Enemy"))
+        {
+            GameManager.Instance.AddCoins(coinValue);
+            GameManager.Instance.AddScore(scoreValue);
+        }
         Destroy(gameObject);
     }
 }

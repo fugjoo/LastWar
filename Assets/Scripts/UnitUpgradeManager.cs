@@ -6,8 +6,6 @@ using UnityEngine;
 /// </summary>
 public class UnitUpgradeManager : MonoBehaviour
 {
-    [Tooltip("Available coins for upgrading units.")]
-    public int coins;
     [Tooltip("Base cost for the first upgrade.")]
     public int baseUpgradeCost = 10;
     [Tooltip("Multiplier applied to the cost for each subsequent level.")]
@@ -26,11 +24,10 @@ public class UnitUpgradeManager : MonoBehaviour
             level = existing;
         }
         int cost = GetUpgradeCost(level);
-        if (coins < cost)
+        if (!GameManager.Instance.SpendCoins(cost))
         {
             return false;
         }
-        coins -= cost;
         upgradeLevels[health] = level + 1;
         health.maxHealth += 10;
         health.currentHealth = health.maxHealth;
