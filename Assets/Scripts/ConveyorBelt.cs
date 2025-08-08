@@ -11,6 +11,25 @@ public class ConveyorBelt : MonoBehaviour
     [Tooltip("Speed at which objects are translated along the belt.")]
     public float speed = 1f;
 
+    [Tooltip("Amount to increase speed at each interval.")]
+    public float speedIncrease = 0.5f;
+
+    [Tooltip("Interval in seconds between speed increases.")]
+    public float increaseInterval = 10f;
+
+    private void Start()
+    {
+        if (increaseInterval > 0f)
+        {
+            InvokeRepeating(nameof(IncrementSpeed), increaseInterval, increaseInterval);
+        }
+    }
+
+    private void IncrementSpeed()
+    {
+        speed += speedIncrease;
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         Rigidbody body = collision.rigidbody;
