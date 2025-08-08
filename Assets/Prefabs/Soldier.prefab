@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_Name: Soldier
+  m_Component:
+  - component: {fileID: 1001}
+  - component: {fileID: 1002}
+  - component: {fileID: 1003}
+  - component: {fileID: 1004}
+  - component: {fileID: 1005}
+  m_Layer: 0
+  m_TagString: Untagged
+  m_Active: 1
+--- !u!4 &1001
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &1002
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: 484a74c88a4a4fffae2f59af21095dd1, type: 3}
+  m_Name:
+--- !u!114 &1003
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: b8b5320d4fb44d1ba371db9ff601ddd7, type: 3}
+  m_Name:
+--- !u!114 &1004
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: 1b8eb5f686e548cb9bcb322a6a9df0af, type: 3}
+  m_Name:
+--- !u!65 &1005
+BoxCollider:
+  m_GameObject: {fileID: 100000}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1, z: 1}
