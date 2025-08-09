@@ -12,10 +12,14 @@ public class Health : MonoBehaviour
     public int coinValue = 0;
     [Tooltip("Score awarded to the player when this unit dies.")]
     public int scoreValue = 0;
+    [Tooltip("Particle effect played on death.")]
+    public ParticleSystem deathEffect;
+    private Animator animator;
 
     private void Awake()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     /// <summary>
@@ -44,6 +48,18 @@ public class Health : MonoBehaviour
         {
             GameManager.Instance.AddCoins(coinValue);
             GameManager.Instance.AddScore(scoreValue);
+        }
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayExplosion();
+        }
+        if (animator != null)
+        {
+            animator.SetTrigger("Death");
+        }
+        if (deathEffect != null)
+        {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }

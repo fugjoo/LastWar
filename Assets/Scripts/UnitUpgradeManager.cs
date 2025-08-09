@@ -10,6 +10,8 @@ public class UnitUpgradeManager : MonoBehaviour
     public int baseUpgradeCost = 10;
     [Tooltip("Multiplier applied to the cost for each subsequent level.")]
     public float costMultiplier = 1.5f;
+    [Tooltip("Particle effect played upon successful upgrade.")]
+    public ParticleSystem upgradeEffect;
 
     private readonly Dictionary<Health, int> upgradeLevels = new();
 
@@ -32,6 +34,14 @@ public class UnitUpgradeManager : MonoBehaviour
         health.maxHealth += 10;
         health.currentHealth = health.maxHealth;
         damage.damage += 2;
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayUpgrade();
+        }
+        if (upgradeEffect != null)
+        {
+            Instantiate(upgradeEffect, health.transform.position, Quaternion.identity);
+        }
         return true;
     }
 
