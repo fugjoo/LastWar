@@ -7,3 +7,5 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: LastWar
   bundleVersion: 1.0
+  scriptingBackend: 1
+  compressionType: 2
