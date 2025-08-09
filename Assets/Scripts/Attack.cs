@@ -11,10 +11,16 @@ public class Attack : MonoBehaviour
     [Tooltip("Particle effect played when attacking.")]
     public ParticleSystem shootEffect;
     private Animator animator;
+    private ParticleSystem shootInstance;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        if (shootEffect != null)
+        {
+            shootInstance = Instantiate(shootEffect, transform);
+            shootInstance.Stop();
+        }
     }
 
     /// <summary>
@@ -40,9 +46,10 @@ public class Attack : MonoBehaviour
             {
                 AudioManager.Instance.PlayShoot();
             }
-            if (shootEffect != null)
+            if (shootInstance != null)
             {
-                Instantiate(shootEffect, transform.position, Quaternion.identity);
+                shootInstance.transform.position = transform.position;
+                shootInstance.Play();
             }
         }
     }

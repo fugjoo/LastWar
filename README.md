@@ -18,6 +18,11 @@ Last War is a Unity-based mobile 3D action game. A conveyor belt moves friendly 
 ## Development Status
 Core gameplay mechanics and UI are implemented. Additional polishing and content are in progress.
 
+## Performance
+- Build settings now use the IL2CPP scripting backend with LZ4HC compression for smaller, faster builds.
+- Profile the game with the Unity Profiler and aim to minimise draw calls and garbage collection allocations.
+- Test builds on device emulators or real hardware to validate performance.
+
 ## Getting Started
 
 ### Requirements
