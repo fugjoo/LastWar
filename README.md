@@ -8,6 +8,7 @@ Ein Unity-Projekt für ein mobiles 3D-Actionspiel. Das Spiel enthält ein Förde
 - Helikopter-Unterstützung
 - Bossgegner mit Lebensbalken
 - Währungssystem und Fortschrittsanzeige
+- UI-Canvas mit Münzzähler, Lebensanzeige und Förderband-Fortschritt
 
 ## Projektstruktur
 - `Assets/` – Spielressourcen und Skripte
@@ -17,7 +18,8 @@ Ein Unity-Projekt für ein mobiles 3D-Actionspiel. Das Spiel enthält ein Förde
 ## Entwicklung
 1. Projekt in Unity (2021 LTS oder neuer) öffnen.
 2. Alle Skripte befinden sich unter `Assets/Scripts`.
-3. Builds für Android oder iOS über die jeweiligen Build Settings erstellen.
+3. Die Benutzeroberfläche verwendet einen Canvas Scaler zur Anpassung an unterschiedliche Auflösungen. Das Skript `CanvasScalerTester` protokolliert Beispielwerte für gängige Mobilgeräte.
+4. Builds für Android oder iOS über die jeweiligen Build Settings erstellen.
 
 ## Beitrag
 - Pull Requests sind willkommen.
