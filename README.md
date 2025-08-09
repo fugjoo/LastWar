@@ -1,27 +1,39 @@
 # Last War
 
-Ein Unity-Projekt für ein mobiles 3D-Actionspiel. Das Spiel enthält ein Förderband, über das sowohl die eigenen Einheiten als auch Bossgegner laufen. Ein Helikopter unterstützt den Spieler aus der Luft. Einheiten und Helikopter können durch Münzen aufgewertet werden.
+Last War is a Unity-based mobile 3D action game. A conveyor belt moves friendly units and boss enemies toward each other while a helicopter provides aerial support. Units and the helicopter can be upgraded using coins.
 
 ## Features
-- Förderband mit zunehmender Geschwindigkeit
-- Spielerische Einheiten mit Upgrades
-- Helikopter-Unterstützung
-- Bossgegner mit Lebensbalken
-- Währungssystem und Fortschrittsanzeige
-- UI-Canvas mit Münzzähler, Lebensanzeige und Förderband-Fortschritt
+- Conveyor belt with increasing speed
+- Upgradeable player units
+- Helicopter support
+- Boss enemies with health bars
+- Currency system and progress display
+- UI canvas with coin counter, health bar, and conveyor progress
 
-## Projektstruktur
-- `Assets/` – Spielressourcen und Skripte
-- `Packages/` – Paketverwaltung von Unity
-- `ProjectSettings/` – Projekteinstellungen von Unity
+## Project Structure
+- `Assets/` – game assets and scripts
+- `Packages/` – Unity Package Manager dependencies
+- `ProjectSettings/` – Unity project settings
 
-## Entwicklung
-1. Projekt in Unity (2021 LTS oder neuer) öffnen.
-2. Alle Skripte befinden sich unter `Assets/Scripts`.
-3. Die Benutzeroberfläche verwendet einen Canvas Scaler zur Anpassung an unterschiedliche Auflösungen. Das Skript `CanvasScalerTester` protokolliert Beispielwerte für gängige Mobilgeräte.
-4. Builds für Android oder iOS über die jeweiligen Build Settings erstellen.
+## Development Status
+Core gameplay mechanics and UI are implemented. Additional polishing and content are in progress.
 
-## Beitrag
-- Pull Requests sind willkommen.
-- Bitte halte dich an die Hinweise in [AGENTS.md](AGENTS.md).
+## Getting Started
 
+### Requirements
+- Unity 2021 LTS or newer
+- Optional: Android or iOS build support modules
+
+### Setup
+1. Clone this repository.
+2. Open **Unity Hub** and add the project folder.
+3. Ensure the required platform modules (Android or iOS) are installed via Unity Hub if you plan to build for mobile.
+4. Open the project in the Unity Editor.
+
+### Running the Game
+1. In Unity, open `Assets/Scenes/MainGame.unity`.
+2. Press the **Play** button to run the scene in the editor.
+3. For mobile builds, open **File > Build Settings**, select your target platform, and build.
+
+## Contributing
+Pull requests are welcome. Please follow the guidelines in [AGENTS.md](AGENTS.md).
