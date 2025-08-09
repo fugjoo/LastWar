@@ -9,6 +9,7 @@ GameObject:
   - component: {fileID: 1003}
   - component: {fileID: 1004}
   - component: {fileID: 1005}
+  - component: {fileID: 1006}
   m_Layer: 0
   m_TagString: Untagged
   m_Active: 1
@@ -28,6 +29,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Script: {fileID: 11500000, guid: b8b5320d4fb44d1ba371db9ff601ddd7, type: 3}
   m_Name:
+  maxHealth: 100
+  currentHealth: 0
+  coinValue: 0
+  scoreValue: 0
+  deathEffect: {fileID: 1002, guid: 6f8c06f59d0e476091afb99657056178, type: 3}
 --- !u!114 &1004
 MonoBehaviour:
   m_GameObject: {fileID: 100000}
@@ -38,3 +44,14 @@ BoxCollider:
   m_GameObject: {fileID: 100000}
   m_IsTrigger: 0
   m_Size: {x: 1, y: 1, z: 1}
+--- !u!95 &1006
+Animator:
+  m_GameObject: {fileID: 100000}
+  m_Controller: {fileID: 9100000, guid: c85f7221ccaf4adf80d53ea64104cd1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage:
+  m_HasTransformHierarchy: 0
+  m_KeepAnimatorControllerStateOnDisable: 0

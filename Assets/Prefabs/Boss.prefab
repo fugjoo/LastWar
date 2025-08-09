@@ -36,6 +36,9 @@ MonoBehaviour:
   m_Name:
   maxHealth: 500
   currentHealth: 0
+  coinValue: 0
+  scoreValue: 0
+  deathEffect: {fileID: 1002, guid: 6f8c06f59d0e476091afb99657056178, type: 3}
 --- !u!114 &1004
 MonoBehaviour:
   m_GameObject: {fileID: 100000}
@@ -43,6 +46,7 @@ MonoBehaviour:
   m_Name:
   damage: 20
   attackInterval: 1.5
+  shootEffect: {fileID: 1002, guid: c91f2946d9c24e5896fa5cb41024bd92, type: 3}
 --- !u!65 &1005
 BoxCollider:
   m_GameObject: {fileID: 100000}

@@ -10,9 +10,20 @@ public class SoldierMovement : MonoBehaviour
     [Tooltip("Horizontal distance moved per lane switch.")]
     public float laneOffset = 1.5f;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        if (animator != null)
+        {
+            animator.SetFloat("Speed", forwardSpeed);
+        }
     }
 
     /// <summary>

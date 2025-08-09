@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!91 &9100000
+AnimatorController:
+  m_Name: Soldier
+  serializedVersion: 5
+  m_AnimatorParameters:
+  - m_Name: Speed
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Attack
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Death
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  m_LayerArray:
+  - serializedVersion: 5
+    m_Name: Base Layer
+    m_StateMachine: {fileID: 110000}
+    m_Mask: {fileID: 0}
+    m_Motions: []
+    m_Behaviours: []
+    m_Blending: 0
+    m_SyncedLayerAffectsTiming: 0
+    m_Weight: 1
+    m_SyncedLayerIndex: -1
+    m_IKPass: 0
+    m_Culling: 0
+    m_DefaultWeight: 0
+    m_AvatarMask: {fileID: 0}
+    m_Speed: 1
+    m_StateMachineBehaviour: 
+    m_Transitions: []
+--- !u!110 &110000
+AnimatorStateMachine:
+  m_Name: Base Layer
+  m_DefaultState: {fileID: 110001}
+  m_ChildStates:
+  - m_State: {fileID: 110001}
+  - m_State: {fileID: 110002}
+  - m_State: {fileID: 110003}
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_ExitTransitions: []
+  m_StateMachineTransitions: {}
+--- !u!110 &110001
+AnimatorState:
+  m_Name: Walk
+  m_Speed: 1
+  m_Motion: {fileID: 7400000, guid: 3ed1c36578db4815a2d4986de409ad8c, type: 3}
+--- !u!110 &110002
+AnimatorState:
+  m_Name: Attack
+  m_Speed: 1
+  m_Motion: {fileID: 7400000, guid: 498f0e4e28074275813b0f5442ecdaa2, type: 3}
+--- !u!110 &110003
+AnimatorState:
+  m_Name: Death
+  m_Speed: 1
+  m_Motion: {fileID: 7400000, guid: 2b026063e8de4ac49f7969a2670f5f44, type: 3}

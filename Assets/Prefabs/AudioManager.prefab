@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_Name: AudioManager
+  m_Component:
+  - component: {fileID: 1001}
+  - component: {fileID: 1002}
+  m_Layer: 0
+  m_TagString: Untagged
+  m_Active: 1
+--- !u!4 &1001
+Transform:
+  m_GameObject: {fileID: 100000}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &1002
+MonoBehaviour:
+  m_GameObject: {fileID: 100000}
+  m_Script: {fileID: 11500000, guid: deed579c94024a9cb41c36c17194b850, type: 3}
+  m_Name:
+  shootClip: {fileID: 8300000, guid: 95d6a0730cef42149a98b54d7d376bcb, type: 3}
+  explosionClip: {fileID: 8300000, guid: 5768f563aa9443a49bab9a12f49bdc5d, type: 3}
+  upgradeClip: {fileID: 8300000, guid: da4387c13e4b4e3a9ec735d8dc19c6f2, type: 3}
